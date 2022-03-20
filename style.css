@@ -1,0 +1,248 @@
+/* обнуление________________________________________ */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));  
+}
+body {
+    min-width: 320px;
+    margin: 0 auto;
+    
+    font-family: 'Comfortaa', cursive;
+    /* color: #000000;
+    font-size: 20px;
+    overflow-x: hidden; */
+    transition: 0.2s;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    color: #000000;
+    transition: 0.7s;
+    } 
+a:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+    transition: 0.7s;
+}
+li,
+ol {
+    cursor: pointer;
+    list-style: none;
+}
+
+/* header_____________________________________________________ */
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.title-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    background-image: url("./assets/svg/logo.png");
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    transition: 1s;
+}
+header {
+    border-bottom: 5px solid rgb(187, 162, 52);
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 70px;
+    padding: 0 20px;
+    }
+
+.header-text {
+    padding-left: 15px;
+    font-size: 2rem;
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+
+}
+
+.search-wrapper {
+    position: relative;
+    width: 350px;
+}
+
+.search-wrapper input {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.30s ease-in-out;
+    border: 1px solid #DDDDDD;
+}
+
+input:focus {
+    box-shadow: 0 0 5px #fff;
+    border: 1px solid  #fff;
+    transition: 0.7s;
+}
+
+.search-wrapper i {
+    color: black;
+    position: absolute;
+    cursor: pointer;
+    top: 25%;
+    right: 4%;
+    transition: 0.7s;
+}
+
+/* main________________________________________________________ */
+
+main {
+    border-bottom: 5px solid rgb(187, 162, 52);
+}
+.photo {
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    transition: 0.7s;
+    }
+
+.photo-img {
+    width: 380px;
+    height: 214px;
+    margin-top: 15px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.7s;
+    
+}
+.photo-img:hover {
+    transition: 0.7s;
+    box-shadow:
+        1px 1px #fff,
+        2px 2px #fff,
+        3px 3px #fff,
+        4px 4px #fff,
+        5px 5px #fff,
+        6px 6px #fff,
+        7px 7px #fff;
+    -webkit-transform: translateX(-7px);
+    transform: translateX(-7px);
+}
+
+/* footer____________________________________________________________ */
+.footer-wrapper {
+    padding-top: 10px;
+}
+.rss-school {
+width: 100px;
+}
+.git {
+    width: 50px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-start {
+    display: flex;
+    align-items: center;
+}
+.fonts-footer {
+    padding: 0 9px;
+}
+
+@media(max-width:1280px) {
+    .container {
+    width: 100%;
+}
+}
+
+@media(max-width:768px) {
+.wrapper {
+    width: 95%;
+}
+
+.img {
+    width: 100%;
+}
+
+header {
+    margin: 10px 0;
+    padding: 20px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.h2 {
+    padding: 5px 0;
+}
+}
+
+@media(max-width:480px) {
+.h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.search-wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+.search-wrapper input {
+    font-size: .7rem;
+}
+}
